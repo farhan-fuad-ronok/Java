@@ -1,0 +1,10 @@
+class modularmultiinver{
+            public static void modularmulticheck(int a,int b){
+                    for(int i=1;i<=b;i++){
+                            if(((a*i)%b) == 1){
+                                System.out.println("The desired number Is : "+i);
+                                break;
+                            }
+                    }
+            }
+      }
