@@ -1,0 +1,30 @@
+class reverseString{
+        public static void stringReverse(String res){
+                System.out.println(res);
+                char[] data_res = res.toCharArray();
+                char[] data = res.toCharArray();
+                char temp = 0,z=0;
+                int dataLen = data.length-1;
+              
+                    
+                    while(z <= dataLen){
+                            temp = data[z];   
+                            data[z]=data[dataLen];
+                            data[dataLen] = temp;
+                            z++;
+                            dataLen--;
+                    
+                }
+                    
+              System.out.print("Previous --> ");      
+              for(int p=0;p<data.length;p++){
+                     System.out.print(data_res[p]);      
+              }
+               System.out.println();
+              System.out.print("now --> ");
+              for(int p=0;p<data.length;p++){
+                  System.out.print(" "+data[p]+" ");
+              }      
+               
+        }
+}
