@@ -1,0 +1,26 @@
+class duplicateCheck{ // ronok
+     public static void duplicateEntryCheck(String str){
+        char[] res = str.toCharArray();
+        int b; 
+        int resLength = res.length;
+        for(int c=0;c<resLength;c++){
+            char zz = res[c];
+                for(b=c+1;b<resLength;b++){
+                    if(zz == res[b]){
+                         res[b]='\u0000';
+                         
+                         res[c]='\u0000';
+                         
+                    }
+                }
+        }
+        
+        int resLength_new = res.length;
+        for(int d=0;d<resLength_new;d++){
+                
+            System.out.print(res[d]);
+        }
+        System.out.println();
+        
+     }
+ }
