@@ -1,0 +1,20 @@
+class anagramscheck{
+        public static void anagramcheck(String str1,String str2){
+                System.out.println("line 45");
+                
+                char[] first = str1.toCharArray();
+                char[] second = str2.toCharArray();
+                
+                Arrays.sort(first);
+                Arrays.sort(second);
+                
+                boolean res = Arrays.equals(first,second);
+                
+                if(res){
+                       System.out.println("Yes words are anagrams"); 
+                }
+                if(!res){
+                       System.out.println("NOOOO... words are not anagrams"); 
+                }
+        }
+}
