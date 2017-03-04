@@ -1,0 +1,28 @@
+class printDuplicateString{
+      public static void duplicatePrint(String str){
+            HashMap<Character, Integer> hm = new HashMap<Character, Integer>();
+            for(int z=0;z<str.length();z++){
+                  char v = str.charAt(z);
+                  if(hm.containsKey(v)){
+                        int val = hm.get(v);
+                        val++;
+                        hm.put(v, val);
+                  }
+                  else{
+                      hm.put(v,1);
+                  }
+            }
+            
+    Iterator<Character>keySetIterator = hm.keySet().iterator(); 
+    while(keySetIterator.hasNext()){
+            Character key = keySetIterator.next();
+            System.out.println(key + " Occurs " + hm.get(key)+" Times ");
+   }
+            
+            
+            
+            
+            
+            
+        }
+}
