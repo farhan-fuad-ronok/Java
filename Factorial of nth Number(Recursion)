@@ -1,0 +1,10 @@
+class recursioncheck{
+    public static int factorialCheck(int c){
+            if(c == 1){
+                     return 1;
+            }
+            else{
+                return c*factorialCheck(c-1);
+            }
+    }
+}
