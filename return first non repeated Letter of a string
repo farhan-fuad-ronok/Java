@@ -1,0 +1,30 @@
+class firstNonRepeatedkey{
+    public static void returnFirstNonRepeatedLetter(String str){
+        HashMap<Character,Integer> norepeatletter = new  HashMap<Character,Integer>();
+        for(int g=0;g<str.length();g++){
+               char v = str.charAt(g);
+               if(norepeatletter.containsKey(v)){
+                        int val = norepeatletter.get(v);
+                        val++;
+                        norepeatletter.put(v, val);
+                  }
+                  else{
+                      norepeatletter.put(v,1);
+                  }
+        }
+        
+        Iterator<Character> pk = norepeatletter.keySet().iterator();
+        while(pk.hasNext()){
+              Character key = pk.next();
+              
+              if(norepeatletter.get(key) < 2){
+                    System.out.println("print first non repeated character from String == "+ str +" == is --> " +key);
+                    break;
+                    
+              }
+              
+                
+        }
+        
+    }
+}
